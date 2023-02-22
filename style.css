@@ -1,0 +1,243 @@
+body {
+    margin: 120px 0;
+    font-family: "Inter", sans-serif;
+    color: white;
+    background-color:black;
+    font: 100% / 1.5 courgette, sans-serif;
+    color: hsl(230, 100%, 95%);
+    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+    height: 100%;
+  }
+  
+  
+  h1,
+  h2,
+  h3 {
+    font-weight: bold;
+    margin-top: 3rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-left: 50px;
+    text-align:center;
+    font-family: 'Courgette', cursive;
+    margin: auto;
+    font-size: 3.5rem;
+    font-weight: 300;
+    animation: lights 5s 750ms linear infinite;
+    
+  }
+  
+  @keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  p {
+    color: #666666;
+    line-height: 1.7em;
+  }
+  
+  /*---------------------------------------------------------------------------Date Picker-------*/
+  
+  [type="date"] {
+    background:white url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  .datePickerLabel label {
+    display: block;
+  }
+  .datePickerBloc input {
+    border: 1px solid #c4c4c4;
+    background-color: #ffffff;  
+    width: 95px;
+  }
+  
+  .datePicker{
+      width: 100%;
+  }
+  .dateBloc {
+      display: table-cell;
+      vertical-align: middle;
+      padding-bottom: 3px;
+  }
+  .datePickerLabel {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    margin-bottom: 0;
+  }
+  .datePickerBloc {
+    height: 20px;
+    font-size: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 1px solid #999999;
+  
+  }
+  .date {
+    margin-top:5%;
+    padding-bottom:5%;
+  }
+  
+  .dates {
+    display:flex;
+    justify-content:center;
+  }
+  /*-----------------------------------------------------------------------  Switch  -----------*/
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+    
+  
+  /*-----------------------------------------------------------------------  Input  -----------*/
+  
+  .in {
+    text-align:center;
+    padding-bottom:5%;
+    margin-top:5%;
+  }
+  .text {
+    padding-top:2%;
+  }
+  
+  
+  /*-----------------------------------------------------------------------  padding  -----------*/
+  
+  
+  .question {
+    text-align:center;
+    margin-top:5%;
+    padding-bottom:5%;
+  }
+  
+  .questions {
+    text-align:center;
+    margin-top:1%;
+    padding-bottom:1%;
+  }
+  
+  
+  
+  
+  
