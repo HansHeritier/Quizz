@@ -5,7 +5,7 @@ body {
     background-color:black;
     font: 100% / 1.5 courgette, sans-serif;
     color: hsl(230, 100%, 95%);
-    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+    background: linear-gradient(135deg, hsl(230, 41%, 12%), hsl(230, 20%, 7%));
     height: 100%;
   }
   
